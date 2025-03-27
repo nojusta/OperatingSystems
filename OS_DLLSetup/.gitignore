@@ -1,0 +1,29 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+ARM64/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.sln.docstates
+ipch/
+*.opendb
+*.VC.db
+*.vsidx
+*.ipch
+
+# macOS files
+.DS_Store
+
+# Compiled files
+*.dll
+*.exe
+*.pdb
+*.tlog
+*.log
+*.idb

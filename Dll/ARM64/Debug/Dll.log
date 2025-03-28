@@ -1,0 +1,70 @@
+﻿  dllmain.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(42,10): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+  (compiling source file '/dllmain.cpp')
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(42,22): error C2039: 'create_directory': is not a member of 'std'
+  (compiling source file '/dllmain.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\chrono(45,1):
+      see declaration of 'std'
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(42,22): error C3861: 'create_directory': identifier not found
+  (compiling source file '/dllmain.cpp')
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(46,14): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+  (compiling source file '/dllmain.cpp')
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(46,26): error C2039: 'create_directory': is not a member of 'std'
+  (compiling source file '/dllmain.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\chrono(45,1):
+      see declaration of 'std'
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(46,26): error C3861: 'create_directory': identifier not found
+  (compiling source file '/dllmain.cpp')
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(50,18): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+  (compiling source file '/dllmain.cpp')
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(50,30): error C2039: 'create_directory': is not a member of 'std'
+  (compiling source file '/dllmain.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\chrono(45,1):
+      see declaration of 'std'
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(50,30): error C3861: 'create_directory': identifier not found
+  (compiling source file '/dllmain.cpp')
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(93,14): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+  (compiling source file '/dllmain.cpp')
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(93,26): error C2664: 'int remove(const char *)': cannot convert argument 1 from 'const _Ty' to 'const char *'
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(93,26): error C2664:         with
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(93,26): error C2664:         [
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(93,26): error C2664:             _Ty=std::string
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(93,26): error C2664:         ]
+  (compiling source file '/dllmain.cpp')
+      C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(93,33):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h(369,26):
+      see declaration of 'remove'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory(2271,43):
+      could be '_FwdIt std::remove(_FwdIt,const _FwdIt,const _Ty &)'
+          C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(93,26):
+          '_FwdIt std::remove(_FwdIt,const _FwdIt,const _Ty &)': expects 3 arguments - 1 provided
+      C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(93,26):
+      while trying to match the argument list '(const _Ty)'
+          with
+          [
+              _Ty=std::string
+          ]
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(105,14): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+  (compiling source file '/dllmain.cpp')
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(105,26): error C2039: 'remove_all': is not a member of 'std'
+  (compiling source file '/dllmain.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\chrono(45,1):
+      see declaration of 'std'
+  
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(105,26): error C3861: 'remove_all': identifier not found
+  (compiling source file '/dllmain.cpp')
+  

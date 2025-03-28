@@ -1,0 +1,7 @@
+﻿AppWithDLL.obj : error LNK2019: unresolved external symbol measureTime referenced in function main
+AppWithDLL.obj : error LNK2019: unresolved external symbol runPingTest referenced in function main
+AppWithDLL.obj : error LNK2019: unresolved external symbol createDirectories referenced in function main
+AppWithDLL.obj : error LNK2019: unresolved external symbol calculateCubic referenced in function main
+AppWithDLL.obj : error LNK2019: unresolved external symbol mergeFiles referenced in function main
+AppWithDLL.obj : error LNK2019: unresolved external symbol removeDirectories referenced in function main
+C:\Users\nojukas123\source\repos\DllSetup\ARM64\Debug\AppWithDLL.exe : fatal error LNK1120: 6 unresolved externals

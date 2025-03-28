@@ -1,0 +1,8 @@
+﻿  dllmain.cpp
+C:\Users\nojukas123\source\repos\DllSetup\Dll\dllmain.cpp(73,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/dllmain.cpp')
+  
+     Creating library C:\Users\nojukas123\source\repos\DllSetup\ARM64\Release\Dll.lib and object C:\Users\nojukas123\source\repos\DllSetup\ARM64\Release\Dll.exp
+  Generating code
+  Finished generating code
+  Dll.vcxproj -> C:\Users\nojukas123\source\repos\DllSetup\ARM64\Release\Dll.dll

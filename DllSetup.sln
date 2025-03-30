@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppWithDLL", "AppWithDLL\Ap
 		{97F10E95-A291-4922-878A-182AB2BEB08E} = {97F10E95-A291-4922-878A-182AB2BEB08E}
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstallSetupDLL", "InstallSetupDLL\InstallSetupDLL.vdproj", "{B4269BE4-7B90-4665-D766-305329746EC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -43,6 +45,18 @@ Global
 		{004C63CB-8AA0-4024-9560-957B7E327096}.Release|x64.Build.0 = Release|x64
 		{004C63CB-8AA0-4024-9560-957B7E327096}.Release|x86.ActiveCfg = Release|Win32
 		{004C63CB-8AA0-4024-9560-957B7E327096}.Release|x86.Build.0 = Release|Win32
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Debug|ARM64.Build.0 = Debug|ARM64
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Debug|x64.ActiveCfg = Debug|x64
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Debug|x64.Build.0 = Debug|x64
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Debug|x86.ActiveCfg = Debug|x86
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Debug|x86.Build.0 = Debug|x86
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Release|ARM64.ActiveCfg = Release|ARM64
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Release|ARM64.Build.0 = Release|ARM64
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Release|x64.ActiveCfg = Release|x64
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Release|x64.Build.0 = Release|x64
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Release|x86.ActiveCfg = Release|x86
+		{B4269BE4-7B90-4665-D766-305329746EC9}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

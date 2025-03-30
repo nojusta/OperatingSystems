@@ -16,13 +16,16 @@ int main() {
     std::string command = "echo Skaiciuojama Tschirnhausen kubine kreive...";
     system(command.c_str());
 
-    double stepSize = 0.1;
+    // Nustatome zingsni pagal uzduoti
+    double stepSize = studNumber / 1000000000000.0;
+    // Apribojame minimalu zingsni, kad programa veiktu efektyviai
+    if (stepSize < 0.001) stepSize = 0.001;
 
     for (int funcParam = -2; funcParam <= 2; funcParam++) {
         std::cout << "\nSkaiciuojama kreive su F=" << funcParam << std::endl;
         calculateCubic(funcParam,
-            -(studNumber % 19), 
-            studNumber % 25,    
+            -(studNumber % 19),
+            studNumber % 25,
             stepSize);
         std::cout << "Sujungiami failai su F=" << funcParam << std::endl;
         mergeFiles(funcParam);
@@ -34,6 +37,7 @@ int main() {
     long long endTime = measureTime();
 
     std::cout << "\nProgramos vykdymo laikas: " << (endTime - startTime) << " ms\n" << std::endl;
-    system("pause");
+    std::cout << "Spauskite Enter, kad iseiti...";
+    std::cin.get();
     return 0;
 }

@@ -7,6 +7,7 @@
 #include <iostream>
 #include <chrono>
 #include <windows.h>
+#include <limits>
 
 // Laiko matavimas
 long long measureTime() {
@@ -21,6 +22,10 @@ void runPingTest(const std::string& ipAddress) {
     std::string command = "ping " + ipAddress + " > " + tempFile;
     system(command.c_str());
     system(("notepad " + tempFile).c_str());
+
+    std::cout << "Ping test baigtas." << std::endl;
+    system("pause"); 
+
     system(("del " + tempFile).c_str());
 }
 
@@ -49,7 +54,7 @@ void calculateCubic(int F, int x0, int xn, double dx) {
         dx = 0.001; // Apribojam minimalu zingsni, kad isvengtume per ilgu skaiciavimu
     }
 
-    // Sukuriame vektoriu visiems failams
+    // Sukuriame vektori visiem failams, planuosim irasyti i visa failystema
     std::vector<std::string> filePaths;
     std::string lastName = "Stankevicius";
     std::string firstName = "Nojus";
@@ -70,7 +75,7 @@ void calculateCubic(int F, int x0, int xn, double dx) {
     }
 
     int fileIndex = 0;
-    int totalFiles = filePaths.size();
+    size_t totalFiles = filePaths.size();
     int totalPoints = 0;
 
     // Pereiti per nurodyta x intervala

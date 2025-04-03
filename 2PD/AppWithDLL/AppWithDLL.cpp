@@ -4,13 +4,19 @@
 int main() {
     std::cout << "Pradedama programa..." << std::endl;
     long long startTime = measureTime();
-    int studNumber = 2314099;
-    //std::cout << studNumber % 3 + 1 << std::endl;
+    int studNumber = 9999999;
 
     std::cout << "Kuriama katalogu struktura..." << std::endl;
+    try {
+        createDirectories("Nojus", "Stankevicius");
+        std::cout << "Katalogai sukurti sekmingai." << std::endl;
+    }
+    catch (const std::exception& e) {
+        std::cerr << "Klaida kuriant katalogus: " << e.what() << std::endl;
+        return 1;
+    }
     createDirectories("Nojus", "Stankevicius");
 
-    // Stud_ID % 3 + 1 = 2314099 % 3 + 1 = 2 (Ping testas)
     runPingTest("8.8.8.8");
 
     std::string command = "echo Skaiciuojama Tschirnhausen kubine kreive...";

@@ -8,6 +8,7 @@
 #include <chrono>
 #include <windows.h>
 #include <limits>
+#include <ShlObj.h> 
 
 // Laiko matavimas
 long long measureTime() {
@@ -29,10 +30,29 @@ void runPingTest(const std::string& ipAddress) {
     system(("del " + tempFile).c_str());
 }
 
-// Aplankų kūrimas
+std::string g_basePath;
+
 void createDirectories(const std::string& firstName, const std::string& lastName) {
     std::string root = lastName;
-    std::filesystem::create_directory(root);
+    
+    bool success = false;
+    try {
+        std::filesystem::create_directory(root);
+        success = true;
+    } 
+    catch (const std::filesystem::filesystem_error&) {
+        success = false;
+    }
+    
+    if (!success) {
+        char appDataPath[MAX_PATH];
+        if (SUCCEEDED(SHGetFolderPathA(NULL, CSIDL_LOCAL_APPDATA, NULL, 0, appDataPath))) {
+            g_basePath = std::string(appDataPath) + "\\KubineKreive\\";
+            std::filesystem::create_directory(g_basePath);
+            root = g_basePath + lastName;
+            std::filesystem::create_directory(root);
+        }
+    }
 
     for (int i = 1; i <= 3; i++) {
         std::string subdir = root + "\\" + firstName + std::to_string(i);
@@ -62,8 +82,14 @@ void calculateCubic(int F, int x0, int xn, double dx) {
     // Sudarom failu keliu sarasa pagal sukurta direktoriju struktura
     for (int i = 1; i <= 3; i++) {
         for (int j = 1; j <= 3; j++) {
-            std::string path = lastName + "\\" + firstName + std::to_string(i) + "\\" +
-                firstName + std::to_string(i) + firstName + std::to_string(j) + "\\data.txt";
+            std::string path;
+            if (!g_basePath.empty()) {
+                path = g_basePath + lastName + "\\" + firstName + std::to_string(i) + "\\" +
+                    firstName + std::to_string(i) + firstName + std::to_string(j) + "\\data.txt";
+            } else {
+                path = lastName + "\\" + firstName + std::to_string(i) + "\\" +
+                    firstName + std::to_string(i) + firstName + std::to_string(j) + "\\data.txt";
+            }
             filePaths.push_back(path);
         }
     }
@@ -128,8 +154,14 @@ void mergeFiles(int F) {
     // Sudarom failu keliu sarasa pagal sukurta direktoriju struktura
     for (int i = 1; i <= 3; i++) {
         for (int j = 1; j <= 3; j++) {
-            std::string path = lastName + "\\" + firstName + std::to_string(i) + "\\" +
-                firstName + std::to_string(i) + firstName + std::to_string(j) + "\\data.txt";
+            std::string path;
+            if (!g_basePath.empty()) {
+                path = g_basePath + lastName + "\\" + firstName + std::to_string(i) + "\\" +
+                    firstName + std::to_string(i) + firstName + std::to_string(j) + "\\data.txt";
+            } else {
+                path = lastName + "\\" + firstName + std::to_string(i) + "\\" +
+                    firstName + std::to_string(i) + firstName + std::to_string(j) + "\\data.txt";
+            }
             filePaths.push_back(path);
         }
     }
@@ -168,8 +200,13 @@ void mergeFiles(int F) {
 
 // Aplankų pašalinimas
 void removeDirectories() {
-    // Isvalome sukurta direktoriju struktura
     std::string lastName = "Stankevicius";
-    std::filesystem::remove_all(lastName);
-    std::cout << "Sekmingai pasalintos direktorijos" << std::endl;
+    
+    if (!g_basePath.empty()) {
+        std::filesystem::remove_all(g_basePath + lastName);
+        std::cout << "Sekmingai pasalintos direktorijos is " << g_basePath << std::endl;
+    } else {
+        std::filesystem::remove_all(lastName);
+        std::cout << "Sekmingai pasalintos direktorijos" << std::endl;
+    }
 }

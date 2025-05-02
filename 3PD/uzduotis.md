@@ -26,7 +26,6 @@ Visos užduotys atliekamos **tiek UNIX (bash), tiek PowerShell (Windows)** aplin
    Apskaičiuokite visas galimas funkcijos reikšmes ir pateikite rezultatą – funkcijos optimumą.  
    - Jeigu studento ID **lyginis** – naudoti **f_max(x, y)**  
    - Jeigu studento ID **nelyginis** – naudoti **f_min(x, y)**
-   - Mano studento ID – 2314009
     **Funkcija:** f(x, y) = 100*y - x² + (1 - x²)
 
     **Intervalai:**

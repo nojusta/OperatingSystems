@@ -11,8 +11,8 @@ double f(double x, double y) {
 int main() {
     int id = 2314000;
 
-    double dx = 0.0000001;
-    double dy = 0.0000003;
+    double dx = 0.00001;
+    double dy = 0.00003;
 
     int mod_x = id % 39;
     int mod_y_min = id % 35;

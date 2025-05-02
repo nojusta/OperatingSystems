@@ -1,7 +1,6 @@
 #!/bin/bash
 # 3 užduotis:
 # Naudojame sed komandą, kad kiekvienoje eilutėje sukeistume pirmą ir antrą žodžius.
-# Pavyzdys: "Labas rytas pasauli" -> "rytas Labas pasauli"
 
 # Tikriname, ar nurodytas failas kaip argumentas
 if [ $# -ne 1 ]; then

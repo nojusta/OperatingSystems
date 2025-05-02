@@ -9,13 +9,13 @@ Visos užduotys atliekamos **tiek UNIX (bash), tiek PowerShell (Windows)** aplin
 
 ---
 
-1. **Naudojant komandą `who` nukreipkite jos įvykdymo rezultatą į failą „Vardas“.**  
-   Paleiskite komandą `more` failo „Vardas“ peržiūrai.
+1. **Naudojant komandą `who` nukreipkite jos įvykdymo rezultatą į failą Nojus.**  
+   Paleiskite komandą `more` failo Nojus peržiūrai.
 
 2. **Panaudokite komandas `date` ir `who` vienu metu (vienoje eilutėje):**  
    - `date` išvedimas turi būti matomas ekrane;  
-   - `who` rezultatas turi būti nukreiptas į failą Pavardė.  
-   Patikrinkite failo Pavardė turinį su komanda `more`.
+   - `who` rezultatas turi būti nukreiptas į failą "Stankevicius".  
+   Patikrinkite failo "Stankevicius" turinį su komanda `more`.
 
 3. **Raskite informaciją apie komandą `sed` ir sukurkite jos panaudojimą taip, kad kiekvienoje eilutėje būtų sukeisti pirmas ir antras žodžiai.**
 
